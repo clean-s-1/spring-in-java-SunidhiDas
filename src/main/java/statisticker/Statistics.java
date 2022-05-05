@@ -17,11 +17,11 @@ public class Statistics
         }
        for(int i=1;i<numbers.size();i++){
           sum += numbers.get(i);
-           if(numbers.get(i)>max){
-              max = numbers.get(i);   
-           }else if(numbers.get(i)<min){
-              min = numbers.get(i);
-           }
+//            if(numbers.get(i)>max){
+//               max = numbers.get(i);   
+//            }else if(numbers.get(i)<min){
+//               min = numbers.get(i);
+//            }
        }
         average = sum/numbers.size();
     }
