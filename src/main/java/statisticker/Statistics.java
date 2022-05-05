@@ -17,6 +17,11 @@ public class Statistics
             calculateMaxMinAvg();
         }
         public void calculateMaxMinAvg(){
+            if(numbers.isEmpty()){
+             min = Float.NaN;
+             max = Float.NaN;
+             average = Float.NaN;
+            }else{
             min = numbers.get(0);
             max = numbers.get(0);
             sum = numbers.get(0);
@@ -29,6 +34,7 @@ public class Statistics
                 }
              }
              average = sum/numbers.size();
+           }
         }
         
     }
