@@ -15,7 +15,7 @@ public class Statistics
     }
     public static Stats getStatistics(List<Float> numbers) {
         //implement the computation of statistics here
-        Stats s = new Stats(List<Float> numbers);
+        Stats s = new Stats(numbers);
         return s;
     }
 }
