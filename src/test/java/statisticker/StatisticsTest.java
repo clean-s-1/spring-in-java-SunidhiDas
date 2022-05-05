@@ -35,6 +35,9 @@ public class StatisticsTest
         //Float.NaN (not-a-number), as described in
         //https://www.geeksforgeeks.org/nan-not-number-java/
         //Design the asserts here and implement accordingly.
+        assertEquals(s.average,Float.NaN);
+        assertEquals(s.min,Float.NaN);
+        assertEquals(s.max,Float.NaN);
     }
     @Test
     public void reportsAlertsIfMaxIsMoreThanThreshold()
