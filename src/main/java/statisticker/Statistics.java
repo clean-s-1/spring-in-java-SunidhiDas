@@ -21,3 +21,9 @@ public class Statistics
         return s;
     }
 }
+interface IAlerter{
+}
+class EmailAlert implements IAlerter{
+}
+class LEDAlert implements IAlerter{
+}
