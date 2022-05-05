@@ -47,10 +47,10 @@ public class Statistics
 interface IAlerter{
 }
 class EmailAlert implements IAlerter{
-    public boolean emailSent = false;
+    public boolean emailSent = true;
 }
 class LEDAlert implements IAlerter{
-    public boolean ledGlows = false;
+    public boolean ledGlows = true;
 }
 class StatsChecker{
    StatsChecker(float maxThreshold, IAlerter[] alerters){
