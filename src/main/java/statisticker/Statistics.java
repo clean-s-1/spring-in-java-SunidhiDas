@@ -14,16 +14,20 @@ public class Statistics
         List<Float> numbers = new ArrayList<Float>();
         Stats(List<Float> number){
             numbers = number;
+            claculateMaxMinAvg();
         }
-       for(int i=1;i<numbers.size();i++){
-          sum += numbers.get(i);
-//            if(numbers.get(i)>max){
-//               max = numbers.get(i);   
-//            }else if(numbers.get(i)<min){
-//               min = numbers.get(i);
-//            }
-       }
-        average = sum/numbers.size();
+        public void calculateMaxMinAvg(){
+             for(int i=1;i<numbers.size();i++){
+                   sum += numbers.get(i);
+                if(numbers.get(i)>max){
+                    max = numbers.get(i);   
+                }else if(numbers.get(i)<min){
+                    min = numbers.get(i);
+                }
+             }
+             average = sum/numbers.size();
+        }
+        
     }
     public static Stats getStatistics(List<Float> numbers) {
         //implement the computation of statistics here
