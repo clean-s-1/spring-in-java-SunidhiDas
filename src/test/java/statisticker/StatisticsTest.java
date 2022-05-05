@@ -15,7 +15,7 @@ public class StatisticsTest
     public void reportsAverageMinMaxx()
     {
         Float[] numbers = {1.5f, 8.9f, 3.2f, 4.5f};
-        List<___> numberList = Arrays.asList(numbers);
+        List<Float> numberList = Arrays.asList(numbers);
 
         Statistics.Stats s = Statistics.getStatistics(numberList);
 
