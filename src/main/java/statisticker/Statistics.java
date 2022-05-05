@@ -15,7 +15,6 @@ public class Statistics
         Stats(List<Float> number){
             numbers = number;
         }
-        
        for(int i=1;i<numbers.size();i++){
           sum += numbers.get(i);
            if(numbers.get(i)>max){
