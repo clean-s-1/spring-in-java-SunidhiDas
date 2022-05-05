@@ -8,15 +8,18 @@ public class Statistics
     }
     public static class Stats{
         float average = 0.0f;
-        float min = numbers.get(0);
-        float max = numbers.get(0);
-        float sum = numbers.get(0);
+        float min = 0.0f;
+        float max = 0.0f;
+        float sum = 0.0f;
         List<Float> numbers = new ArrayList<Float>();
         Stats(List<Float> number){
             numbers = number;
-            claculateMaxMinAvg();
+            calculateMaxMinAvg();
         }
         public void calculateMaxMinAvg(){
+            min = numbers.get(0);
+            max = numbers.get(0);
+            sum = numbers.get(0);
              for(int i=1;i<numbers.size();i++){
                    sum += numbers.get(i);
                 if(numbers.get(i)>max){
