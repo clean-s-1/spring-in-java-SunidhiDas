@@ -4,6 +4,8 @@ import java.util.*;
 
 public class Statistics 
 {
+    public static class ___{
+    }
     public static class Stats{
         List<Float> numbers = new ArrayList<Float>();
         Stats(List<Float> number){
