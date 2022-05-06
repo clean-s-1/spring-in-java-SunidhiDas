@@ -61,9 +61,9 @@ class StatsChecker{
    }
     public void checkAndAlert(Float[] numbers){
        for(IAlerter alerter:alerters){
-           if(alerter.instaceOf(EmailAlert)){
+           if(EmailAlert.instaceOf(alerter)){
               alerter.emailSent = true;
-           }else if(alerter.instaceOf(LEDAlert)){
+           }else if(LEDAlert.instaceOf(alerter)){
              alerter.ledGlows = true;
            }
        }
