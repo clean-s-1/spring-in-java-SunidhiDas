@@ -54,11 +54,13 @@ class LEDAlert implements IAlerter{
 }
 class StatsChecker{
     IAlerter[] alerters = null;
+    float maxThreshold = 0.0f;
    StatsChecker(float maxThreshold, IAlerter[] alerter){
       alerters = alerter;
+       this.maxThreshold = maxThreshold;
    }
     public void checkAndAlert(Float[] numbers){
-       for(IAlerter alerter:aleters){
+       for(IAlerter alerter:alerters){
            if(alerter.instaceOf(EmailAlert)){
               alerter.emailSent = true;
            }else if(alerter.instaceOf(LEDAlert)){
