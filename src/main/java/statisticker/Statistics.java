@@ -68,8 +68,15 @@ class StatsChecker{
         }
         if(max>maxThreshold){
             for(IAlerter alerter:alerters){
-                alerter.emailSent = true;
-                alerter.ledGlows = true;
+                if(EmailAlert.instaceOf(alerter)){
+                    EmailAlert emailAlert = (EmailAlert)alerter;
+                    emailAlert.emailSent = true;
+                }else if(LEDAlert.instaceOf(alerter)){
+                    LEDAlert ledAlert = (LEDAlert)alerter;
+                    ledAlert.ledGlows = true;
+                }
+//                 alerter.emailSent = true;
+//                 alerter.ledGlows = true;
             }
         }
 //        for(IAlerter alerter:alerters){
