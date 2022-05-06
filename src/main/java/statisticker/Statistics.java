@@ -4,8 +4,6 @@ import java.util.*;
 
 public class Statistics 
 {
-    public static class ___{
-    }
     public static class Stats{
         float average = 0.0f;
         float min = 0.0f;
@@ -44,6 +42,8 @@ public class Statistics
         return s;
     }
 }
+class ___{
+}
 interface IAlerter{
 }
 class EmailAlert implements IAlerter{
@@ -77,16 +77,7 @@ class StatsChecker{
                     ledAlert = (LEDAlert)alerter;
                     ledAlert.ledGlows = true;
                 }
-//                 alerter.emailSent = true;
-//                 alerter.ledGlows = true;
             }
         }
-//        for(IAlerter alerter:alerters){
-//            if(EmailAlert.instaceOf(alerter)){
-//               alerter.emailSent = true;
-//            }else if(LEDAlert.instaceOf(alerter)){
-//              alerter.ledGlows = true;
-//            }
-//        }
     }
 }
