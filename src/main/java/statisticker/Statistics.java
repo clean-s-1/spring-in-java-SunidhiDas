@@ -55,6 +55,8 @@ class LEDAlert implements IAlerter{
 class StatsChecker{
     IAlerter[] alerters = null;
     float maxThreshold = 0.0f;
+    EmailAlert emailAlert =null;
+    LEDAlert ledAlert =null;
    StatsChecker(float maxThreshold, IAlerter[] alerter){
       alerters = alerter;
        this.maxThreshold = maxThreshold;
@@ -69,10 +71,10 @@ class StatsChecker{
         if(max>maxThreshold){
             for(IAlerter alerter:alerters){
                 if(alerter.instaceOf(EmailAlert)){
-                    EmailAlert emailAlert = (EmailAlert)alerter;
+                    emailAlert = (EmailAlert)alerter;
                     emailAlert.emailSent = true;
                 }else if(alerter.instaceOf(LEDAlert)){
-                    LEDAlert ledAlert = (LEDAlert)alerter;
+                    ledAlert = (LEDAlert)alerter;
                     ledAlert.ledGlows = true;
                 }
 //                 alerter.emailSent = true;
