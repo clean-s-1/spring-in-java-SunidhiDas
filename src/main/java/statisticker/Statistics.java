@@ -45,12 +45,14 @@ public class Statistics
     }
 }
 interface IAlerter{
+    public boolean emailSent = false;
+    public boolean ledGlows = false;
 }
 class EmailAlert implements IAlerter{
-    public boolean emailSent = false;
+    //public boolean emailSent = false;
 }
 class LEDAlert implements IAlerter{
-    public boolean ledGlows = false;
+    //public boolean ledGlows = false;
 }
 class StatsChecker{
     IAlerter[] alerters = null;
