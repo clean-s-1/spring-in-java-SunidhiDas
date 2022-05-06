@@ -70,10 +70,10 @@ class StatsChecker{
         }
         if(max>maxThreshold){
             for(IAlerter alerter:alerters){
-                if(alerter instaceof EmailAlert){
+                if(alerter instanceof EmailAlert){
                     emailAlert = (EmailAlert)alerter;
                     emailAlert.emailSent = true;
-                }else if(alerter instaceof LEDAlert){
+                }else if(alerter instanceof LEDAlert){
                     ledAlert = (LEDAlert)alerter;
                     ledAlert.ledGlows = true;
                 }
