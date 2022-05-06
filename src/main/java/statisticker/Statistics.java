@@ -55,8 +55,8 @@ class LEDAlert implements IAlerter{
 class StatsChecker{
     IAlerter[] alerters = null;
     float maxThreshold = 0.0f;
-    EmailAlert emailAlert =null;
-    LEDAlert ledAlert =null;
+    EmailAlert emailAlert =new EmailAlert();
+    LEDAlert ledAlert = new LEDAlert();
    StatsChecker(float maxThreshold, IAlerter[] alerter){
       alerters = alerter;
        this.maxThreshold = maxThreshold;
