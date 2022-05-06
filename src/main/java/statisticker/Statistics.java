@@ -45,14 +45,12 @@ public class Statistics
     }
 }
 interface IAlerter{
-    public boolean emailSent = false;
-    public boolean ledGlows = false;
 }
 class EmailAlert implements IAlerter{
-    //public boolean emailSent = false;
+    public boolean emailSent = false;
 }
 class LEDAlert implements IAlerter{
-    //public boolean ledGlows = false;
+    public boolean ledGlows = false;
 }
 class StatsChecker{
     IAlerter[] alerters = null;
@@ -72,10 +70,10 @@ class StatsChecker{
         }
         if(max>maxThreshold){
             for(IAlerter alerter:alerters){
-                if(alerter.instaceOf(EmailAlert)){
+                if(alerter.instaceof(EmailAlert)){
                     emailAlert = (EmailAlert)alerter;
                     emailAlert.emailSent = true;
-                }else if(alerter.instaceOf(LEDAlert)){
+                }else if(alerter.instaceof(LEDAlert)){
                     ledAlert = (LEDAlert)alerter;
                     ledAlert.ledGlows = true;
                 }
