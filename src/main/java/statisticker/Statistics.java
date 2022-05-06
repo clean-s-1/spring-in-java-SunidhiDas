@@ -60,12 +60,24 @@ class StatsChecker{
        this.maxThreshold = maxThreshold;
    }
     public void checkAndAlert(Float[] numbers){
-       for(IAlerter alerter:alerters){
-           if(EmailAlert.instaceOf(alerter)){
-              alerter.emailSent = true;
-           }else if(LEDAlert.instaceOf(alerter)){
-             alerter.ledGlows = true;
-           }
-       }
+        float max=numbers[0];
+        for(int i =1;i<numbers.length;i++){
+             if(numbers[i]>max){
+                max=numbers[i];
+             }
+        }
+        if(max>maxThreshold){
+            for(IAlerter alerter:alerters){
+                alerter.emailSent = true;
+                alerter.ledGlows = true;
+            }
+        }
+//        for(IAlerter alerter:alerters){
+//            if(EmailAlert.instaceOf(alerter)){
+//               alerter.emailSent = true;
+//            }else if(LEDAlert.instaceOf(alerter)){
+//              alerter.ledGlows = true;
+//            }
+//        }
     }
 }
