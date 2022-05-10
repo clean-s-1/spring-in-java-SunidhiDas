@@ -42,8 +42,6 @@ public class Statistics
         return s;
     }
 }
-class ___{
-}
 interface IAlerter{
 }
 class EmailAlert implements IAlerter{
